@@ -39,8 +39,9 @@ wp
 2. Run the container.
 
 Inside the wordpress-xdebug folder run the following command:
-
+```
 docker-compose up -d
+```
 Wait until the command finishes and then access http://localhost:8080/, this is the url where the WordPress site is running.
 
 3. Start coding.
