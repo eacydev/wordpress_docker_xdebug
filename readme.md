@@ -24,7 +24,7 @@ php.debug.executablePath
 
 5. Install Xdebug extension for Visual Studio Code
 
-### Steps to use this repository 🤓
+## Steps to use this repository 🤓
 1. Clone the repository.
 
 git clone https://github.com/eacydev/wordpress_docker_xdebug.git
@@ -51,7 +51,6 @@ After the container is running you can open the folder wordpress-xdebug in the V
 
 There is a launch.json file inside the folder .vscode with the debug configuration. Add the breakpoints in the code and go to the Debug Menu (Ctrl + Shift + D) and click on the Start Debugging button.
 
-xdebug
 
-Final notes ☕
+## Final notes ☕
 Check that your Docker is configured to run linux container.
