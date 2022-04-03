@@ -4,18 +4,35 @@ services:
   db:
     image: mysql:5.7
     restart: on-failure
+    volumes:
+      - ./db_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
 
+  # phpmyadmin
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8082:80
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: password 
+
+  # wordpress
   wp:
     depends_on:
     - db
     image: andreccosta/wordpress-xdebug
     volumes:
-    - ./wp:/var/www/html
+      - ./wp:/var/www/html # Full wordpress project
+      #- ./plugin-name/trunk/:/var/www/html/wp-content/plugins/plugin-name # Plugin development
+      #- ./theme-name/trunk/:/var/www/html/wp-content/themes/theme-name # Theme development
     ports:
     - 8080:80
     restart: on-failure
