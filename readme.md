@@ -16,16 +16,18 @@ These are the versions of the tools used:
 2. Install Docker
 3. Install PHP
 4. Install Visual Studio Code
-Set path to your php.exe in Visual Studio code settings
-''' php.validate.executablePath 
-    php.debug.executablePath
-'''
+Set path to your php.exe in Visual Studio code settings.json
+``` 
+php.validate.executablePath 
+php.debug.executablePath
+```
+
 5. Install Xdebug extension for Visual Studio Code
 
 ### Steps to use this repository 🤓
 1. Clone the repository.
 
-git clone https://github.com/fgarciachipi/wordpress-xdebug.git
+git clone https://github.com/eacydev/wordpress_docker_xdebug.git
 
 Once the repository is cloned, we need to create two folders named wp and db_data inside the repository folder. The wp folder is used for the WordPress container to storage the site (see docker-compose.yml file) and the db_data folder is for MySql container to storage database data.
 
@@ -43,9 +45,9 @@ Wait until the command finishes and then access http://localhost:8080/, this is 
 
 3. Start coding.
 
-After the container is running you can open the folder wordpress-xdebug in the Visual Studio Code and see that the folder html is not empty, it has the WordPress files.
+After the container is running you can open the folder wordpress-xdebug in the Visual Studio Code and see that the folder wp is not empty, it has the WordPress files.
 
-VS
+## To debug
 
 There is a launch.json file inside the folder .vscode with the debug configuration. Add the breakpoints in the code and go to the Debug Menu (Ctrl + Shift + D) and click on the Start Debugging button.
 
@@ -53,4 +55,3 @@ xdebug
 
 Final notes ☕
 Check that your Docker is configured to run linux container.
-Since the html folder is excluded from git, if you are going to create a theme or a plugin you need to add the exception to the .gitignore file. (See line 26 for plugins and line 32 for themes)
