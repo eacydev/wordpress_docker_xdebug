@@ -1,5 +1,5 @@
 # WordPress + Xdebug + Docker + Phpmyadmin in Visual Studio Code
-I'm new to wordpress plugin so I was looking for away to develop and debug on the same time. Their where some god information on internet but no one with all components I was looking for. I start to try Laragon but then you need to install a lot on your local macine to get everything to work. So finally I find Docker, so the idea behind this repository is to schare my developement setup to simplify the start of the development with WordPress and of course, keep your machine clean.
+I'm new to wordpress plugin so I was looking for away to develop and debug on the same time. Their where some god information on internet but no one with all components I was looking for. I start to try Laragon but then you need to install a lot on your local macine to get everything to work. So finally I chosed Docker Composer, beacause you can set up the enviroment by one file and keep your machine clean.
 
 This repository allows you to quickly start developing and/or debugging your WordPress theme or plugin.
 
@@ -14,6 +14,7 @@ The code in this repository has been tested using Windows 10
 These are the versions of the tools used:
 
 Visual Studio Code: v1.65.2 | [download](https://code.visualstudio.com/download)
+
 Xdebug extension for Visual Studio Code (PHP Debug): v1.13.0 | download
 Docker Desktop: 2.0.0.3 (31259) | download
 Docker compose: v3.7
